@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mr.Blonde</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <meta property="og:title" content="Mr.Blonde Game">
+  <meta property="og:description" content="Catch enemies and dodge bullets in this exciting action game!">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="http://funmrblonde.github.io">
+  <meta property="og:image" id="og-image" content="">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Mr.Blonde Game">
+  <meta name="twitter:description" content="Catch enemies and dodge bullets in this exciting action game!">
+  <meta name="twitter:image" id="twitter-image" content="">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="start-screen" class="screen">
+    <h1>Mr.Blonde</h1>
+    <div class="game-controls">
+      <button id="start-button">Start Game</button>
+      <p>Controls: Arrow keys or W/A/S/D</p>
+      <p id="high-score">High Score: 0</p>
+    </div>
+    <canvas id="main-menu-character"></canvas>
+    <a href="https://pump.fun/coin/6Hr44YfC3eWq7mXGZUEZvTEFLYmwF2dB9mJujcam5HRG" target="_blank" class="pump-fun-button">pump.fun</a>
+  </div>
+
+  <div id="game-screen" class="screen hidden">
+    <div class="game-container">
+      <div id="ui">
+        <span id="score">Score: 0</span>
+        <span id="lives">Lives: 3</span>
+        <span id="timer">Time: 60</span>
+      </div>
+      <canvas id="game-canvas"></canvas>
+      <button id="sound-toggle" class="sound-button">🔊</button>
+    </div>
+    <div id="pause-menu" class="hidden">
+      <h2>Paused</h2>
+      <button id="resume-button">Resume</button>
+      <button id="main-menu-button">Main Menu</button>
+    </div>
+    <div id="countdown" class="hidden"></div>
+    <div id="screen-size-warning" class="hidden">
+      Please increase window size for better gaming experience
+    </div>
+  </div>
+
+  <div id="end-screen" class="screen hidden">
+    <h1>Game Over</h1>
+    <p id="final-score">Your Score: 0</p>
+    <p id="new-high-score" class="hidden">New High Score!</p>
+    <button id="restart-button">Play Again</button>
+    <div class="social-share">
+      <button class="facebook" onclick="UI.shareOnFacebook().catch(console.error)">Share on Facebook</button>
+      <button class="x" onclick="UI.shareOnX().catch(console.error)">Share on X</button>
+      <button class="telegram" onclick="UI.shareOnTelegram().catch(console.error)">Share on Telegram</button>
+    </div>
+  </div>
+
+  <script src="js/config.js"></script>
+  <script src="js/entities.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/sound-generator.js"></script>
+  <script src="js/sounds.js"></script>
+  <script src="js/game.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html> 
